@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar com Submenu e Footer</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: #111; /* Fundo preto */
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens da navbar quebrem para a próxima linha se necessário */
+            justify-content: space-between; /* Alinha os itens com espaço entre eles */
+            align-items: center;
+            background-color: #333;
+            padding: 15px 10px; /* Reduzido para melhor responsividade */
+            border-bottom: 4px solid #ff8c00; /* Linha laranja embaixo */
+            border-radius: 0 0 10px 10px; /* Bordas arredondadas na navbar */
+        }
+        .navbar a {
+            color: #ff8c00;
+            padding: 12px 10px; /* Reduzido para melhor responsividade */
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #ff8c00;
+            color: #111;
+            border-radius: 5px; /* Botões arredondados */
+        }
+
+        /* Dropdown estilo amigável */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown a {
+            padding-right: 15px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            border-radius: 5px;
+            margin-top: 10px;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+        }
+        .dropdown-content a {
+            color: #ff8c00;
+            padding: 12px;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #ff8c00;
+            color: #111;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Espaçamento do topo */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Começa invisível */
+                transform: translateY(-20px); /* Move um pouco para cima */
+            }
+            to {
+                opacity: 1; /* Fica totalmente visível */
+                transform: translateY(0); /* Retorna à posição original */
+            }
+        }
+
+        /* Estilo da imagem */
+        .image-container img {
+            max-width: 100%; /* Imagem não excede a largura do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+            transition: transform 0.3s ease; /* Transição suave */
+            animation: fadeIn 1s ease; /* Aplica a animação ao carregar */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+        }
+
+        .MinecraftWonderful {
+            text-align: center;
+            padding: 20px; /* Espaçamento interno */
+            font-size: 20px;
+            color: #1d28bf;
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column; /* Empilha itens em telas menores */
+                align-items: flex-start; /* Alinha à esquerda */
+            }
+            .navbar a {
+                padding: 10px 0; /* Espaçamento uniforme */
+            }
+            .MinecraftWonderful {
+                font-size: 18px; /* Diminui o tamanho da fonte em telas menores */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <div class="dropdown">
+            <a href="#jogos">Jogos</a>
+            <div class="dropdown-content">
+                <a href="#minecraft-wonderful">Minecraft Wonderful</a>
+                <a href="#minecraft-beautiful">Minecraft Beautiful</a>
+                <a href="#bedrock-edition">Bedrock Edition</a>
+            </div>
+        </div>
+        <a href="#servidores">Servidores</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#suporte">Suporte</a>
+    </div>
+
+    <div class="image-container">
+        <img src="C:\Users\User\Documents\minecraft PS3\Site Oficial\logokingmine.png" alt="King Mine Logo" width="300px">
+    </div>
+
+    <!-- Conteúdo da página -->
+    <div style="padding: 20px;">
+        <h1>Bem-vindo ao King Mine Studios!</h1>
+        <p>Explore os nossos jogos e servidores. Confira as últimas novidades sobre Minecraft e outras edições!</p>
+        <p>A primeira equipe a desenvolver MODS e jogos para PS3 em 2024.</p>
+    </div>
+
+    <div class="MinecraftWonderful">
+        <h1>- Projetos -</h1>
+    </div>
+    
+    <div class="image-container">
+        <img src="C:\Users\User\Documents\minecraft PS3\Site Oficial\wonderfullogo.png" alt="wonderfullogo" width="300px">
+    </div>
+    
+    <div class="image-container">
+        <img src="C:\Users\User\Documents\minecraft PS3\Site Oficial\logoservidorps3.png" alt="wonderfullogo" width="300px">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>King Mine Studios &copy; 2024 Todos os direitos reservados.</p>
+        <p>Criado por Maximus Gobetti Fortes</p>
+    </footer>
+
+</body>
+</html>
